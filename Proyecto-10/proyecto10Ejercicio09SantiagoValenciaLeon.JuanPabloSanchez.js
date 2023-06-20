@@ -7,30 +7,30 @@
 
 // Los primeros nueve términos de la serie de Bell son: 1, 1, 2, 5, 15, 52, 203, 877, 4140.
 
-function factorial(n) {
-    if (n == 0) return 1;
-    return n * factorial(n - 1);
-}
+const factorial = (n) => {
+  if (n == 0) return 1;
+  return n * factorial(n - 1);
+};
 
-function combinatoria(n, k) {
-    return factorial(n) / (factorial(k) * factorial(n - k));
-}
+const combinatoria = (n, k) => {
+  return factorial(n) / (factorial(k) * factorial(n - k));
+};
 
-function bell(n) {
-    if (n == 0 || n == 1) return 1;
-    let sumatoria = 0;
-    for (let k = 0; k <= n - 1; k++) {
-        sumatoria += combinatoria(n - 1, k) * bell(k);
-    }
-    return sumatoria;
-}
+const bell = (n) => {
+  if (n == 0 || n == 1) return 1;
+  let sumatoria = 0;
+  for (let k = 0; k <= n - 1; k++) {
+    sumatoria += combinatoria(n - 1, k) * bell(k);
+  }
+  return sumatoria;
+};
 
-function repeatFunction(n) {
-    if (n >= 0) {
-        repeatFunction(n - 1);
-        console.log(bell(n));
-    }
-}
+const repeatFunction = (n) => {
+  if (n >= 0) {
+    repeatFunction(n - 1);
+    console.log(bell(n));
+  }
+};
 
 repeatFunction(10);
 
