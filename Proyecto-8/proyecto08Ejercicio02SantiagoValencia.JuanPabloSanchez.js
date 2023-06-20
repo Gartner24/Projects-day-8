@@ -2,7 +2,7 @@
 2. Escribir un programa que calcule el volumen de una esfera, teniendo en cuenta la siguiente formula: 4/3PIr^3. Tome un valor de PI=3.1415926
 -----------------------------------------------------------------
 Fecha de publicación: 20-06-2023
-Hora:
+Hora: 10:22 a.m
 Versión: 1.0
 Autores: Ing(c) Santiago Valencia, Ing(c) Juan Pablo Sánchez
 Lenguaje: JavaScript
@@ -15,14 +15,14 @@ Programa de Ingeniería de Sistemas y Computación
 Descripción: Este programa calcula el volumen de una esfera
 tomando el radio.
 */
-//import {prompt} from "../prompt";
 
+//const prompt=require("prompt-sync")({sigint:true});
 const PI = 3.1415926;
 
 function volumenEsfera(){
     //let radio = prompt("Por favor digite el radio de la esfera:");
     let radio = 4;
-    let resultado = (4 / 3)*PI*(radio ** 3);
+    let resultado = (4 / 3)*PI*(radio ** 3);//Variable que guarda el resultado final luego de pedir el radio
     console.log("El volumen de una esfera de radio " + radio + " es de " + resultado);
 }
 

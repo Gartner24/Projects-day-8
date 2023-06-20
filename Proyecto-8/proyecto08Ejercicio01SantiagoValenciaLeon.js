@@ -1,5 +1,5 @@
 // 1. Escribir un programa que convierta de grados centígrados a grados fahrenheit.
-const prompt=require("prompt-sync")({sigint:true});
+//const prompt=require("prompt-sync")({sigint:true});
 
 let grados = prompt("Ingrese grados: ");
 
