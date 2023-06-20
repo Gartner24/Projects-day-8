@@ -12,6 +12,6 @@ const repeatFunction = (n) => {
     repeatFunction(n - 1);
     console.log(perrin(n));
   }
-}
+};
 
 repeatFunction(19);

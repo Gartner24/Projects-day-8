@@ -6,8 +6,6 @@ const fibonacci = (n) => {
   return fibonacci(n - 1) + fibonacci(n - 2);
 };
 
-console.log(fibonacci(1))
-
 const repeatFunction = (n) => {
   if (n >= 0) {
     repeatFunction(n - 1);
@@ -15,4 +13,4 @@ const repeatFunction = (n) => {
   }
 };
 
-repeatFunction(20);
+repeatFunction(19);
