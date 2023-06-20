@@ -1,4 +1,4 @@
-
+// const prompt = require("prompt-sync")({sigint: true});
 // 1. Escribir un programa que convierta de grados centígrados a grados fahrenheit.
 
 

@@ -1,3 +1,4 @@
+// const prompt = require("prompt-sync")({sigint: true});
 
 // 5. Escribir un programa que pida horas y minutos como datos de entrada e imprima el total en minutos.
 

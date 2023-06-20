@@ -1,3 +1,4 @@
+// const prompt = require("prompt-sync")({sigint: true});
 // 9. Escribir un programa que encuentre el valor del ángulo faltante de un triángulo si toma el valor de los otros dos ángulos como datos de entrada.
 
 // let angulo1 = prompt("Ingrese el angulo 1: ");

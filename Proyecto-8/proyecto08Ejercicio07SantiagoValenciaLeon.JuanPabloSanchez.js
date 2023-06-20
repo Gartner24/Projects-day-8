@@ -1,3 +1,4 @@
+// const prompt = require("prompt-sync")({sigint: true});
 // 7. Escribir un programa que pida como datos de entrada el nombre, apellido y año de nacimiento y luego los imprima juntos.
 
 // let nombre = prompt("Ingrese su nombre");

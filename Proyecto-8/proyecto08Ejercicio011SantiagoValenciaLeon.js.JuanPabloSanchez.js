@@ -1,3 +1,4 @@
+// const prompt = require("prompt-sync")({sigint: true});
 // 11. Escribir un programa que pida horas, minutos y segundos como datos de entrada y muestre en pantalla el número de milisegundos.
 
 // let hora = prompt("Ingrese horas: ");
