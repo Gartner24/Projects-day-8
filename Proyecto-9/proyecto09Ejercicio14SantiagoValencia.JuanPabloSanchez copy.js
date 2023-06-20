@@ -18,7 +18,8 @@ Descripción: Este programa calcula el descuento de un articulo con base a su cl
 */
 
 //const prompt=require("prompt-sync")({sigint:true});
-//let horasTrabajadas = prompt("Ingrese las horas trabajdas: ");
+//let clave = prompt("Ingrese su clave: ");
+//let precioOriginal = prompt("Ingrese el precio original del articulo: ")
 let clave = 2;
 let precioOriginal = 30000;
 let precioDescuento = precioOriginal;
