@@ -1,4 +1,4 @@
-/*EJERCICIO 05 - PROYECTO 08
+/*EJERCICIO 09 - PROYECTO 08
 9. Escribir un programa que encuentre el valor del ángulo faltante de un triángulo si toma el valor de los otros dos ángulos como datos de entrada.
 
 -----------------------------------------------------------------

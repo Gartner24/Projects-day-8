@@ -1,4 +1,4 @@
-/*EJERCICIO 05 - PROYECTO 08
+/*EJERCICIO 07 - PROYECTO 08
 7. Escribir un programa que pida como datos de entrada el nombre, apellido y año de nacimiento y luego los imprima juntos.
 
 -----------------------------------------------------------------

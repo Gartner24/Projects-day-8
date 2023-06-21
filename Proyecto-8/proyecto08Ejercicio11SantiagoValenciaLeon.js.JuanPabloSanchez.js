@@ -1,4 +1,4 @@
-/*EJERCICIO 05 - PROYECTO 08
+/*EJERCICIO 11 - PROYECTO 08
 11. Escribir un programa que pida horas, minutos y segundos como datos de entrada y muestre en pantalla el número de milisegundos.
 
 -----------------------------------------------------------------

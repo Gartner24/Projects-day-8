@@ -1,20 +1,37 @@
-// 17- Construir un programa que calcule el índice de masa corporal de una persona, donde: (IMC = peso [kg] /altura2 [m]) e indique el estado en el que se encuentra esa persona en función del valor de IMC:
+/*EJERCICIO 17 - PROYECTO 09
+17- Construir un programa que calcule el índice de masa corporal de una persona, donde: (IMC = peso [kg] /altura2 [m]) e indique el estado
+en el que se encuentra esa persona en función del valor de IMC:
 
-// < 16 - Criterio de ingreso en hospital
-// 16 - 17 - Infrapeso
-// 17 - 18 - Bajo peso
-// 18 - 25 - Peso normal (saludable)
-// 25 - 30 - Sobrepeso (obesidad de grado I)
-// 30 - 35 - Sobrepeso crónico (obesidad de grado II)
-// 35 - 40 - Obesidad premórbida (obesidad de grado III)
-// > 40 - Obesidad mórbida (obesidad de grado IV)
+< 16 - Criterio de ingreso en hospital
+16 - 17 - Infrapeso
+17 - 18 - Bajo peso
+18 - 25 - Peso normal (saludable)
+25 - 30 - Sobrepeso (obesidad de grado I)
+30 - 35 - Sobrepeso crónico (obesidad de grado II)
+35 - 40 - Obesidad premórbida (obesidad de grado III)
+> 40 - Obesidad mórbida (obesidad de grado IV)
 
-// let peso = prompt("Ingrese su peso en kg: ");
-// let altura = prompt("Ingrese su altura en m: ");
+-----------------------------------------------------------------
+Fecha de publicación: 20-06-2023
+Hora: 10:22 a.m
+Versión: 1.0
+Autores: Ing(c) Santiago Valencia, Ing(c) Juan Pablo Sánchez
+Lenguaje: JavaScript
+Versión del lenguaje: 6.0
+Presentado a: Doctor Ricardo Moreno Laverde
+-----------------------------------------------------------------
+Universidad Tecnológica de Pereira
+Programa de Ingeniería de Sistemas y Computación
+-----------------------------------------------------------------
+Descripción: Este programa calcula el índice de masa corporal de una persona, donde: (IMC = peso [kg] /altura2 [m]) e indica el estado
+*/
+const prompt = require("prompt-sync")({sigint: true});
 
-let peso = 56;
-let altura = 1.7;
+// Variables que almacenan el peso y la altura
+let peso = prompt("Ingrese su peso en kg: ");
+let altura = prompt("Ingrese su altura en m: ");
 
+// Función que calcula el IMC y muestra el estado de la persona
 function calcularIMC(peso, altura) {
   let imc = peso / (altura * altura);
   if (imc < 16) console.log("Criterio de ingreso en hospital");
