@@ -1,14 +1,14 @@
-/*EJERCICIO 31 - PROYECTO 10
-31. Hacer un programa para calcular los resultados de las siguientes funciones usando las series de Taylor
+/*EJERCICIO 33 - PROYECTO 10
+33. Hacer un programa para calcular los resultados de las siguientes funciones usando las series de Taylor
 que se dan a continuación.
 Para cada ejercicio, pida por teclado: a). El valor de x b). El número de términos de la serie
 Mostraremos ejemplos con 10 terminos de cada serie, con estos valores puede probar sus resultados.
 Para valores conocidos de entrada, valores conocidos a la salida.
 
 -----------------------------------------------------------------
-Fecha de publicación: 20-06-2023
-Hora: 10:22 a.m
-Versión: 1.0
+Fecha de publicación: 22-06-2023
+Hora: 09:07 a.m
+Versión: 2.0
 Autores: Ing(c) Santiago Valencia, Ing(c) Juan Pablo Sánchez
 Lenguaje: JavaScript
 Versión del lenguaje: 6.0
