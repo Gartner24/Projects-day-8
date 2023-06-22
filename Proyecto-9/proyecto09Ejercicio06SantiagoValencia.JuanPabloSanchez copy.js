@@ -15,11 +15,13 @@ Programa de Ingeniería de Sistemas y Computación
 Descripción: Este programa decide si un numero es mayor de 100
 */
 
-//const prompt=require("prompt-sync")({sigint:true});
-function decidirMayor100(){
-    //let numero = prompt("Ingrese un numero: ");
-    let numero = 120;//Ingresado por consola
-    if(numero > 100) console.log(numero + " es mayor de 100");
-}
+const prompt = require('prompt-sync')({ sigint: true });
+
+// Funcion que decide si un numero es mayor de 100
+const decidirMayor100 = () => {
+	let numero = prompt('Ingrese un numero: ');
+
+	if (numero > 100) console.log(`${numero} es mayor de 100`);
+};
 
 decidirMayor100();

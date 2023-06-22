@@ -16,20 +16,26 @@ Programa de Ingeniería de Sistemas y Computación
 Descripción: Indica si un alumno aprueba o reprueba segun su promedio de tres notas
 */
 
-//const prompt=require("prompt-sync")({sigint:true});
-function promedioAprobacion(){
-    /*let nota1 = prompt("Ingrese la primer nota: ");
-    let nota2= prompt("Ingrese la segunda nota: );
-    let nota3 = prompt("Ingrese la tercera nota: )*/
-    let nota1 = 3;//Ingresado por consola
-    let nota2 = 2;//Ingresado por consola
-    let nota3 = 2.8;//Ingresado por consola
-    let promedio = (nota1 + nota2 + nota3) / 3;
-    if(promedio >= 3){
-        console.log("Usted ha aprobado este curso con un promedio final de: " + promedio);
-    }else{
-        console.log("Usted ha reprobado este curso con un promedio final de: " + promedio);
-    }
-}
+const prompt = require('prompt-sync')({ sigint: true });
+
+// Función que calcula el promedio de tres notas y muestra si el alumno aprueba o reprueba
+const promedioAprobacion = () => {
+	let nota1 = prompt('Ingrese la primer nota: ');
+	let nota2 = prompt('Ingrese la segunda nota: ');
+	let nota3 = prompt('Ingrese la tercera nota: ');
+
+	// Variable que almacena el promedio de las tres notas
+	let promedio = (nota1 + nota2 + nota3) / 3;
+
+	if (promedio >= 3) {
+		console.log(
+			`Usted ha aprobado este curso con un promedio final de: ${promedio}`
+		);
+	} else {
+		console.log(
+			`Usted ha reprobado este curso con un promedio final de: ${promedio}`
+		);
+	}
+};
 
 promedioAprobacion();

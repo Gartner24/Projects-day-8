@@ -5,7 +5,7 @@ datos de entrada, teniendo en cuenta que el perímetro es la suma de sus 4 lados
 -----------------------------------------------------------------
 Fecha de publicación: 20-06-2023
 Hora: 10:22 a.m
-Versión: 1.0
+Versión: 2.0
 Autores: Ing(c) Santiago Valencia, Ing(c) Juan Pablo Sánchez
 Lenguaje: JavaScript
 Versión del lenguaje: 6.0
@@ -17,18 +17,18 @@ Programa de Ingeniería de Sistemas y Computación
 Descripción: Este programa imprime el perímetro de un rectángulo.
 */
 
-const prompt = require("prompt-sync")({sigint: true});
+const prompt = require('prompt-sync')({ sigint: true });
 
 // Variables que almacena el largo y el ancho del rectángulo
-let largo = prompt("Ingrese el largo: ");
-let ancho = prompt("Ingrese el ancho: ");
+let largo = prompt('Ingrese el largo: ');
+let ancho = prompt('Ingrese el ancho: ');
 // Variables que almacenara el perímetro del rectángulo
 let perimetro = 0;
 
 // Función que calcula el perímetro del rectángulo
-function calcularPerimetro(largo, ancho) {
-  perimetro = 2 * (largo + ancho);
-  return perimetro;
+const calcularPerimetro = (largo, ancho) => {
+	perimetro = 2 * (largo + ancho);
+	return perimetro;
 }
 
 console.log(calcularPerimetro(largo, ancho));

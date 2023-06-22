@@ -21,7 +21,7 @@ const prompt = require("prompt-sync")({sigint: true});
 let numero = prompt("Ingrese un numero del 1 al 5: ");
 
 // Funcion que determina si el numero es primo o no
-function esPrimo(numero) {
+const esPrimo = (numero) => {
   if (numero == 1) console.log("El numero no es primo")
   if (numero == 2) console.log("El numero es primo");
   if (numero == 3) console.log("El numero es primo");

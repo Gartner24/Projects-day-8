@@ -22,17 +22,25 @@ Descripción: Este programa permite determinar el pago de alquiler de un vehicul
 //let kilometrosRecorridos = prompt("Ingrese los kilometros recorridos: ");
 let kilometrosRecorridos = 1004;
 
-function compañiaDeAlquiler(kilometrosRecorridos){
-    let montoFijo = 400000;
-    if(kilometrosRecorridos <= 300){
-        montoFijo = montoFijo;
-    }else if(kilometrosRecorridos > 300 && kilometrosRecorridos <= 1000){
-        montoFijo += 15000 * (kilometrosRecorridos - 300);
-    }else if(kilometrosRecorridos > 1000){
-        montoFijo += (15000 * (kilometrosRecorridos - 300 - (kilometrosRecorridos - 1000))) + (10000 * (kilometrosRecorridos - 1000));
-    }
-    let iva = montoFijo * 0.2;
-    console.log("Monto a pagar por el alquiler: " + montoFijo + "\nMonto Incluido del IVA: " + iva);
-}
+//Función que determina el pago de alquiler de un vehiculo y el monto incluido del impuesto
+const compañiaDeAlquiler = (kilometrosRecorridos) => {
+	let montoFijo = 400000;
+	let iva = 0;
+	if (kilometrosRecorridos <= 300) {
+		montoFijo = montoFijo;
+	} else if (kilometrosRecorridos > 300 && kilometrosRecorridos <= 1000) {
+		montoFijo += 15000 * (kilometrosRecorridos - 300);
+	} else if (kilometrosRecorridos > 1000) {
+		montoFijo +=
+			15000 *
+				(kilometrosRecorridos - 300 - (kilometrosRecorridos - 1000)) +
+			10000 * (kilometrosRecorridos - 1000);
+	}
+	iva = montoFijo * 0.2;
+
+	console.log(
+		`Monto a pagar por el alquiler: ${montoFijo}\nMonto Incluido del IVA: ${iva}`
+	);
+};
 
 compañiaDeAlquiler(kilometrosRecorridos);

@@ -16,17 +16,19 @@ Programa de Ingeniería de Sistemas y Computación
 -----------------------------------------------------------------
 Descripción: Este programa calcula el valor de la compra de una persona con un descuento del 20% si la compra supera los $100,000.
 */
-const prompt = require("prompt-sync")({sigint: true});
+const prompt = require('prompt-sync')({ sigint: true });
 
 // Variable que almacena el valor de la compra
-let valorCompra = prompt("Ingrese el valor de su compra: ");
+let valorCompra = prompt('Ingrese el valor de su compra: ');
 
 // Función que calcula el valor de la compra con el descuento
-function calcularDescuento(valor) {
-  let valorTotal = valorCompra;
-  if (valor <= 100000) valorTotal -= valor * 0.2;
-  console.log("El valor total de su compra es: " + valorTotal);
-  console.log(valorTotal.toFixed(1))
-}
+const calcularDescuento = (valor) => {
+	let valorTotal = valorCompra;
+
+	// Si el valor de la compra es mayor a $100,000 se le aplica el descuento
+	if (valor <= 100000) valorTotal -= valor * 0.2;
+
+	console.log(`El valor total de su compra es: ${valorTotal}`);
+};
 
 calcularDescuento(valorCompra);

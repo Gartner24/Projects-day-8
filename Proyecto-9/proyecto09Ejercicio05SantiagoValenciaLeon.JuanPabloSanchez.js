@@ -27,12 +27,12 @@ let antiguedad = prompt("Ingrese la antiguedad en años: ");
 let sueldo = prompt("Ingrese el sueldo: ");
 
 // Funcion que calcula el sueldo mensual
-function sueldoMensual(tiempo, sueldo) {
+const sueldoMensual = (tiempo, sueldo) => {
     if (tiempo > 10) sueldo *= 1.1;
     if (tiempo <= 10 && tiempo > 5) sueldo *= 1.07;
     if (tiempo <= 5 && tiempo > 3) sueldo *= 1.05;
     if (tiempo <= 3) sueldo *= 1.03;
-    console.log("El sueldo mensual es de " + sueldo + " euros");
+    console.log(`El sueldo mensual es de ${sueldo} euros`)
 }
 
 sueldoMensual(antiguedad, sueldo);
