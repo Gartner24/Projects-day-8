@@ -21,7 +21,7 @@ const prompt = require("prompt-sync")({sigint: true});
 let numero = prompt("Ingrese numero: ");
 
 // Funcion que determina el dia de la semana
-function diaSemana (numero) {
+const diaSemana = (numero) => {
     if (numero == 1) console.log("El dia es lunes");
     if (numero == 2) console.log("El dia es martes");
     if (numero == 3) console.log("El dia es miercoles");

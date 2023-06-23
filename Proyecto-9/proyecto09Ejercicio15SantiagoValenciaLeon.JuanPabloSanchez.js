@@ -16,18 +16,18 @@ Programa de Ingeniería de Sistemas y Computación
 -----------------------------------------------------------------
 Descripción: Este programa calcula el total a pagar por la compra de camisas. Si se compran tres camisas o mas se aplica un descuento del
 */
-const prompt = require("prompt-sync")({sigint: true});
+const prompt = require('prompt-sync')({ sigint: true });
 
 // variables que almacenan el total de camisas y el precio
-let camisas = prompt("Ingrese el total de las camisas a comprar: ")
-let precio = prompt("Ingrese el precio total: ")
+let camisas = prompt('Ingrese el total de las camisas a comprar: ');
+let precio = prompt('Ingrese el precio total: ');
 
 // Función que calcula el total a pagar por la compra de camisas
-function calcularDescuento(camisas, precio) {
-  precioTotal = precio;
-  if (camisas >= 3) precioTotal -= precio* 0.2;
-  else precioTotal -= precio * 0.1;
-  console.log("El precio total es: " + precioTotal);
-}
+const calcularDescuento = (camisas, precio) => {
+	let precioTotal = precio;
+	if (camisas >= 3) precioTotal -= precio * 0.2;
+	else precioTotal -= precio * 0.1;
+  console.log(`El precio total es: ${precioTotal}`)
+};
 
-calcularDescuento(camisas, precio)
+calcularDescuento(camisas, precio);

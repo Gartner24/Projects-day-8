@@ -18,28 +18,33 @@ Descripción: Este programa genera la serie de Taylor para el cosh(x)
 
 const readline = require('readline');
 const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
+	input: process.stdin,
+	output: process.stdout,
 });
 
 // Funcion que imprime las tablas de multiplicar del 1 al 10
-rl.question("Este programa genera la suma de la serie de Taylor para cosh(x)\nIngrese el valor de x: ", function(x) {
-  rl.question("Ingrese el número de términos: ", function(final) {
-    let acumula = 0;
-    for (let elevado = 0; elevado < final; elevado += 2) {
-      acumula += Math.pow(x, elevado) / factorial(elevado);
-    }
-    const result = acumula + 1;
-    console.log("La suma de la serie Taylor para cosh(x) es: " + result);
-    rl.close();
-  });
-});
+rl.question(
+	'Este programa genera la suma de la serie de Taylor para cosh(x)\nIngrese el valor de x: ',
+	function (x) {
+		rl.question('Ingrese el número de términos: ', function (final) {
+			let acumula = 0;
+			for (let elevado = 0; elevado < final; elevado += 2) {
+				acumula += Math.pow(x, elevado) / factorial(elevado);
+			}
+			const result = acumula + 1;
+			console.log(
+				'La suma de la serie Taylor para cosh(x) es: ' + result
+			);
+			rl.close();
+		});
+	}
+);
 
 // Funcion que calcula el factorial de un numero
 function factorial(number) {
-  let result = 1;
-  for (let i = 2; i <= number; i++) {
-    result *= i;
-  }
-  return result;
+	let result = 1;
+	for (let i = 2; i <= number; i++) {
+		result *= i;
+	}
+	return result;
 }

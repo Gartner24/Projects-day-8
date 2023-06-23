@@ -28,24 +28,24 @@ Descripción: Este programa imprime una figura en la consola
 */
 
 const print = (message) => {
-  process.stdout.write(message);
-}
+	process.stdout.write(message);
+};
 
 // Funcion que imprime las ternas de enteros
 function imprimir() {
-  let final = 34;
-  let finalP = 13;
-  for (let fila = 1; fila <= 7; fila++) {
-    for (let espacio = 1; espacio <= final; espacio++) {
-      print(" ");
-    }
-    for (let letra = 1; letra <= finalP; letra++) {
-      print("P");
-    }
-    print("\n");
-    final++;
-    finalP -= 2;
-  }
+	let final = 34;
+	let finalP = 13;
+	for (let fila = 1; fila <= 7; fila++) {
+		for (let espacio = 1; espacio <= final; espacio++) {
+			print(' ');
+		}
+		for (let letra = 1; letra <= finalP; letra++) {
+			print('P');
+		}
+		print('\n');
+		final++;
+		finalP -= 2;
+	}
 }
 
 imprimir();

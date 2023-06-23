@@ -16,17 +16,20 @@ Programa de Ingeniería de Sistemas y Computación
 Descripción: Este programa permite saber cuanto debe pagar una persona por tiempo de parqueo
 */
 
-//const prompt=require("prompt-sync")({sigint:true});
-//let cantidadHoras = prompt("Ingrese la cantidad de horas: ");
-//let cantidadMinutos = prompt("Ingrese la cantidad de minutos: ");
+const prompt = require('prompt-sync')({ sigint: true });
 
-let cantidadHoras = 3;
-let cantidadMinutos = 56;
+// Variables que almacenan la cantidad de horas y minutos
+let cantidadHoras = prompt('Ingrese la cantidad de horas: ');
+let cantidadMinutos = prompt('Ingrese la cantidad de minutos: ');
 
-function estacionamiento(cantidadHoras, cantidadMinutos){
-    let tiempoTotal = cantidadHoras + (cantidadMinutos / 60);
-    let pago = tiempoTotal * 1800;
-    console.log("Usted debe pagar $" + pago + " por un tiempo en parqueo de: " + cantidadHoras + " horas y " + cantidadMinutos + " minutos.");
-}
+// Función que calcula el pago por el tiempo de parqueo
+const estacionamiento = (cantidadHoras, cantidadMinutos) => {
+	let tiempoTotal = cantidadHoras + cantidadMinutos / 60;
+	let pago = tiempoTotal * 1800;
+
+	console.log(
+		`Usted debe pagar $${pago} por un tiempo en parqueo de: ${cantidadHoras} horas y ${cantidadMinutos} minutos.`
+	);
+};
 
 estacionamiento(cantidadHoras, cantidadMinutos);

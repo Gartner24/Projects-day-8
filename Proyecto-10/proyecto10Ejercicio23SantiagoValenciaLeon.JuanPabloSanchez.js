@@ -27,34 +27,34 @@ Descripción: Este programa imprime las letras P moviéndose hacia el centro de 
 */
 
 // Función que imprime en pantalla
-function print(message) {
+const print = (message) => {
 	process.stdout.write(message);
-}
+};
 
 // Función que imprime P cantidad de veces
-function ImprimirP(Inicio, Final) {
+const ImprimirP = (Inicio, Final) => {
 	if (Inicio <= Final) {
 		print('P');
 		ImprimirP(Inicio + 1, Final);
 	}
-}
+};
 
 // Función que imprime espacios
-function ImprimirEsp(Inicio, Final) {
+const ImprimirEsp = (Inicio, Final) => {
 	if (Inicio <= Final) {
 		print(' ');
 		ImprimirEsp(Inicio, Final - 1);
 	}
-}
+};
 
 // Función que imprime la matriz
-function Imprimir(Fila, Contador, Final, FinalP) {
+const Imprimir = (Fila, Contador, Final, FinalP) => {
 	if (Fila <= 7) {
 		ImprimirEsp(Contador, Final);
 		ImprimirP(Contador, FinalP);
 		print('\n');
 		Imprimir(Fila + 1, Contador, Final + 1, FinalP - 2);
 	}
-}
+};
 
 Imprimir(1, 1, 0, 13);

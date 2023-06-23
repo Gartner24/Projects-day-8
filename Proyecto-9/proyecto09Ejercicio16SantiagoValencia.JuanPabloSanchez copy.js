@@ -22,29 +22,46 @@ Programa de Ingeniería de Sistemas y Computación
 Descripción: Este programa permite conocer a una empresa el costo total de la compra y tomar decisiones sobre el pago
 */
 
-//const prompt=require("prompt-sync")({sigint:true});
-//let costoPieza = prompt("Ingrese el costo unitario de la pieza: ");
-//let numeroDePiezas = prompt("Ingrese el numero de piezas compradas: ");
-let costoPieza = 300;
-let numeroDePiezas = 25;
+const prompt = require('prompt-sync')({ sigint: true });
+let costoPieza = prompt('Ingrese el costo unitario de la pieza: ');
+let numeroDePiezas = prompt('Ingrese el numero de piezas compradas: ');
+
+// Función que calcula la economía de la empresa
 let montoTotal = costoPieza * numeroDePiezas;
+
+// Variables que almacenan los valores de la economía de la empresa
 let cantidadInvertida = 0;
 let valorPrestamoBanco = 0;
 let valorCreditoFabricante = 0;
 let interesCobradoPorFabricante = 0;
-function economiaEmpresa(montoTotal){
-    if(montoTotal > 500000){
-        cantidadInvertida = montoTotal * 0.55;
-        valorPrestamoBanco = montoTotal * 0.3;
-        valorCreditoFabricante = montoTotal - cantidadInvertida - valorPrestamoBanco;
-        interesCobradoPorFabricante = valorCreditoFabricante * 0.2;
-        console.log("Cantidad invertida: " + cantidadInvertida + "\nValor Prestamo Banco: " + valorPrestamoBanco + "\nValor Credito Fabricante: " + valorCreditoFabricante + "\nInteres cobrado por fabricante: " + interesCobradoPorFabricante);
-    }else{
-        cantidadInvertida = montoTotal * 0.7;
-        valorCreditoFabricante = montoTotal - cantidadInvertida;
-        interesCobradoPorFabricante = valorCreditoFabricante * 0.2;
-        console.log("Cantidad invertida: " + cantidadInvertida + "\nValor Prestamo Banco: " + valorPrestamoBanco + "\nValor Credito Fabricante: " + valorCreditoFabricante + "\nInteres cobrado por fabricante: " + interesCobradoPorFabricante);
-    }
-}
+
+// Función que calcula la economía de la empresa
+const economiaEmpresa = (montoTotal) => {
+	if (montoTotal > 500000) {
+		cantidadInvertida = montoTotal * 0.55;
+		valorPrestamoBanco = montoTotal * 0.3;
+		valorCreditoFabricante =
+			montoTotal - cantidadInvertida - valorPrestamoBanco;
+		interesCobradoPorFabricante = valorCreditoFabricante * 0.2;
+
+		console.log(`Cantidad invertida: ${cantidadInvertida}`);
+		console.log(`Valor Prestamo Banco: ${valorPrestamoBanco}`);
+		console.log(`Valor Credito Fabricante: ${valorCreditoFabricante}`);
+		console.log(
+			`Interes cobrado por fabricante: ${interesCobradoPorFabricante}`
+		);
+	} else {
+		cantidadInvertida = montoTotal * 0.7;
+		valorCreditoFabricante = montoTotal - cantidadInvertida;
+		interesCobradoPorFabricante = valorCreditoFabricante * 0.2;
+
+		console.log(`Cantidad invertida: ${cantidadInvertida}`);
+		console.log(`Valor Prestamo Banco: ${valorPrestamoBanco}`);
+		console.log(`Valor Credito Fabricante: ${valorCreditoFabricante}`);
+		console.log(
+			`Interes cobrado por fabricante: ${interesCobradoPorFabricante}`
+		);
+	}
+};
 
 economiaEmpresa(montoTotal);

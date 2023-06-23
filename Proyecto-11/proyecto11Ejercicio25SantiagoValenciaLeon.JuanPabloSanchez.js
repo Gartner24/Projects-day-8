@@ -18,28 +18,34 @@ Descripción: Este programa genera la serie de Taylor para el sen(x)
 
 const readline = require('readline');
 const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
+	input: process.stdin,
+	output: process.stdout,
 });
 
 // Funcion que imprime las tablas de multiplicar del 1 al 10
-rl.question("Este programa genera la suma de la serie de Taylor para sen(x)\nIngrese el valor de x: ", function(x) {
-  rl.question("Ingrese el número de términos: ", function(final) {
-    let acumula = 0;
-    for (let numero = 1; numero <= final; numero++) {
-      acumula += (Math.pow(x, 3 + (2 * (numero - 1))) / factorial(3 + (2 * (numero - 1)))) * Math.pow(-1, numero + 2);
-    }
-    const result = x + acumula;
-    console.log("La suma de la serie Taylor para sen(x) es: " + result);
-    rl.close();
-  });
-});
+rl.question(
+	'Este programa genera la suma de la serie de Taylor para sen(x)\nIngrese el valor de x: ',
+	function (x) {
+		rl.question('Ingrese el número de términos: ', function (final) {
+			let acumula = 0;
+			for (let numero = 1; numero <= final; numero++) {
+				acumula +=
+					(Math.pow(x, 3 + 2 * (numero - 1)) /
+						factorial(3 + 2 * (numero - 1))) *
+					Math.pow(-1, numero + 2);
+			}
+			const result = x + acumula;
+			console.log('La suma de la serie Taylor para sen(x) es: ' + result);
+			rl.close();
+		});
+	}
+);
 
 // Funcion que calcula el factorial de un numero
 function factorial(number) {
-  let result = 1;
-  for (let i = 2; i <= number; i++) {
-    result *= i;
-  }
-  return result;
+	let result = 1;
+	for (let i = 2; i <= number; i++) {
+		result *= i;
+	}
+	return result;
 }

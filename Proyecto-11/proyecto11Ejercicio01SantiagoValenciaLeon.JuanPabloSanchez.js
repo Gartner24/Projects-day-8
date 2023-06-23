@@ -21,16 +21,16 @@ Descripción: Este programa presenta la serie de Fibonacci hasta llegar sin sobr
 
 // Funcion que imprime la serie de fibonacci
 const imprimirFibonacci = () => {
-    let num1 = 0;
-    let num2 = 1;
-    let nextNum = 0;
-    
-    while (nextNum <= 10000) {
-      console.log(nextNum);
-      num1 = num2;
-      num2 = nextNum;
-      nextNum = num1 + num2;
-    }
-  }
-  
-  imprimirFibonacci();
+	let num1 = 0;
+	let num2 = 1;
+	let nextNum = 0;
+
+	while (nextNum <= 10000) {
+		console.log(nextNum);
+		num1 = num2;
+		num2 = nextNum;
+		nextNum = num1 + num2;
+	}
+};
+
+imprimirFibonacci();

@@ -15,15 +15,17 @@ Programa de Ingeniería de Sistemas y Computación
 Descripción: Este programa lee un numero e imprime si es par o impar
 */
 
-//const prompt=require("prompt-sync")({sigint:true});
-function decidirParImpar(){
-    //let numero = prompt("Ingrese un numero: ");
-    let numero = 533;
-    if(numero % 2 == 0){
-        console.log("El numero " + numero + " es par.");
-    }else{
-        console.log("El numero " + numero + " es impar.");
-    }
+const prompt = require('prompt-sync')({ sigint: true });
+
+// Función que lee un numero e imprime si es par o impar
+const decidirParImpar = () => {
+	let numero = prompt('Ingrese un numero: ');
+
+	if (numero % 2 == 0) {
+		console.log(`El numero ${numero} es par.`);
+	} else {
+		console.log(`El numero ${numero} es impar.`);
+	}
 }
 
 decidirParImpar();

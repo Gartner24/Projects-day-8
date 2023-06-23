@@ -22,39 +22,43 @@ Programa de Ingeniería de Sistemas y Computación
 -----------------------------------------------------------------
 Descripción: Este programa lee un número entero N, no negativo(validar esto) y muestra la suma de los factoriales de todos los números desde 0 hasta N.
 */
-const prompt = require("prompt-sync")({sigint: true});
+const prompt = require('prompt-sync')({ sigint: true });
 
 // Funcion que calcula el factorial de un numero
 const factorial = (numero) => {
-  let resultado = 1;
-  for (let i = 1; i <= numero; i++) {
-    resultado *= i;
-  }
-  return resultado;
-}
+	let resultado = 1;
+	for (let i = 1; i <= numero; i++) {
+		resultado *= i;
+	}
+	return resultado;
+};
 
 // Funcion que calcula la suma de los factoriales de todos los numeros desde 0 hasta N
 const sumaFactoriales = (numero) => {
-  let suma = 0;
-  for (let i = 0; i <= numero; i++) {
-    suma += factorial(i);
-  }
-  return suma;
-}
+	let suma = 0;
+	for (let i = 0; i <= numero; i++) {
+		suma += factorial(i);
+	}
+	return suma;
+};
 
 // Funcion que lee un numero entero N, no negativo
 const leerNumero = () => {
-  let numero;
-  do {
-    numero = parseInt(prompt("Ingrese un numero entero N, no negativo: "));
-  } while (numero < 0);
-  return numero;
-}
+	let numero;
+	do {
+		numero = parseInt(prompt('Ingrese un numero entero N, no negativo: '));
+	} while (numero < 0);
+	return numero;
+};
 
 // Funcion que imprime la suma de los factoriales de todos los numeros desde 0 hasta N
 const imprimirSumaFactoriales = () => {
-  let numero = leerNumero();
-  console.log(`La suma de los factoriales de todos los numeros desde 0 hasta ${numero} es: ${sumaFactoriales(numero)}`);
-}
+	let numero = leerNumero();
+	console.log(
+		`La suma de los factoriales de todos los numeros desde 0 hasta ${numero} es: ${sumaFactoriales(
+			numero
+		)}`
+	);
+};
 
 imprimirSumaFactoriales();

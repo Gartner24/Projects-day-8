@@ -17,18 +17,18 @@ Programa de Ingeniería de Sistemas y Computación
 -----------------------------------------------------------------
 Descripción: Este programa calcula el dinero que se genera por concepto de intereses sobre la cantidad que tiene en inversión en el banco.
 */
-const prompt = require("prompt-sync")({sigint: true});
+const prompt = require('prompt-sync')({ sigint: true });
 
 // Variables que almacena el interes y el capital inicial
-let interes = prompt("Ingrese el interes: ");
-let capitalInicial = prompt("Ingrese el capital inicial: ");
+let interes = prompt('Ingrese el interes: ');
+let capitalInicial = prompt('Ingrese el capital inicial: ');
 
 // Función que calcula el dinero que se genera por concepto de intereses sobre la cantidad que tiene en inversión en el banco.
-function decidirInversion(interes, capital) {
-  let intereses = interes * capital;
-  if (intereses > 7000)
-    console.log("Invierta su saldo sera: " + (intereses + capital));
-  else console.log("No invierta");
-}
+const decidirInversion = (interes, capital) => {
+	let intereses = interes * capital;
+	if (intereses > 7000)
+		console.log('Invierta su saldo sera: ' + (intereses + capital));
+	else console.log('No invierta');
+};
 
 decidirInversion(interes, capitalInicial);

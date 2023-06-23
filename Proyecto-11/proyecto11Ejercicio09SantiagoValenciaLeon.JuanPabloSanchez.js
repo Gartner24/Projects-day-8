@@ -26,17 +26,17 @@ Programa de Ingeniería de Sistemas y Computación
 Descripción: Este programa genera las siguientes ternas de enteros: (con un máximo de cuatro(4) ordenes “IMPRIMIR” .)
 */
 
-const prompt = require('prompt-sync')({sigint: true});
+const prompt = require('prompt-sync')({ sigint: true });
 
 // Funcion que imprime las ternas de enteros
 const imprimirTernas = () => {
-  let numero = 1;
-  for (let i = 1; i <= 3; i++) {
-    for (let j = 1; j <= 3; j++) {
-      console.log(`${numero} ${i} ${j}`);
-      numero++;
-    }
-  }
-}
+	let numero = 1;
+	for (let i = 1; i <= 3; i++) {
+		for (let j = 1; j <= 3; j++) {
+			console.log(`${numero} ${i} ${j}`);
+			numero++;
+		}
+	}
+};
 
 imprimirTernas();

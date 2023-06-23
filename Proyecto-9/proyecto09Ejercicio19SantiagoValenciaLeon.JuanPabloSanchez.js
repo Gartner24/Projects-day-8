@@ -18,25 +18,25 @@ Programa de Ingeniería de Sistemas y Computación
 -----------------------------------------------------------------
 Descripción: Este programa calcula el monto de la compra, el monto del descuento, el monto a pagar y el número de unidades de obsequio
 */
-const prompt = require("prompt-sync")({sigint: true});
+const prompt = require('prompt-sync')({ sigint: true });
 
 // Variables que almacenan la cantidad de docenas y el precio
-let cantidad = prompt("Ingrese la cantidad de docenas a comprar: ");
-let precio = prompt("Ingrese el precio del producto: ");
+let cantidad = prompt('Ingrese la cantidad de docenas a comprar: ');
+let precio = prompt('Ingrese el precio del producto: ');
 
 // Funcion que calcula el precio total, el descuento y el obsequio
-function calcularCompra(cantidad, precio) {
-    let precioTotal = cantidad * precio;
-    let descuento = 0;
-    let obsequio = 0;
-    if (cantidad > 3) {
-        descuento = precioTotal * 0.15;
-        obsequio = (cantidad - 3) * 12;
-    } else descuento = precioTotal * 0.1;
-    precioTotal -= descuento;
-    console.log("El precio total es: " + precioTotal);
-    console.log("El descuento es: " + descuento);
-    console.log("El obsequio es: " + obsequio);
-    }
+const calcularCompra = (cantidad, precio) => {
+	let precioTotal = cantidad * precio;
+	let descuento = 0;
+	let obsequio = 0;
+	if (cantidad > 3) {
+		descuento = precioTotal * 0.15;
+		obsequio = (cantidad - 3) * 12;
+	} else descuento = precioTotal * 0.1;
+	precioTotal -= descuento;
+	console.log('El precio total es: ' + precioTotal);
+	console.log('El descuento es: ' + descuento);
+	console.log('El obsequio es: ' + obsequio);
+};
 
 calcularCompra(cantidad, precio);
