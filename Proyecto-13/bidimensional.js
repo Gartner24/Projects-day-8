@@ -24,23 +24,6 @@ const createArray = () => {
 // Ejemplo: Para esta secuencia de números aleatorios hay dos(2) modas
 // Imprimiría: Moda 8.2 esta 4 veces. Moda 1.9 esta 4 veces.
 
-// modaReview 1.9 es moda?
-// count++
-// arrayExample = [
-// 	[1.9, 11.2, 8.2, 8.2, 8.2, 8.2, 8.2, 8.2],
-// 	[1.9, 11.2, 8.2, 8.2, 8.2, 8.2, 8.2, 8.2],
-// 	[1.9, 11.2, 8.2, 8.2, 8.2, 8.2, 8.2, 8.2],
-// 	[1.9, 11.2, 8.2, 8.2, 8.2, 8.2, 8.2, 8.2],
-// 	[1.9, 11.2, 8.2, 8.2, 8.2, 8.2, 8.2, 8.2],
-// 	[1.9, 11.2, 8.2, 8.2, 8.2, 8.2, 8.2, 8.2],
-// 	[1.9, 11.2, 8.2, 8.2, 8.2, 8.2, 8.2, 8.2],
-// 	[1.9, 11.2, 8.2, 8.2, 8.2, 8.2, 8.2, 8.2]
-// ]
-
-// Ejemplo 1:
-// modasArray = [1.9]; repedido 4 veces
-// verificando [8.2] contador de la nueva moda = 2
-
 // Constante que guarda el arreglo bidimensional
 const array = createArray();
 // Guardar el(los) moda(s) en un arreglo
@@ -95,13 +78,6 @@ const countRepeatingOfModal = (modaReview) => {
 
 // Compara las repeticiones del valor que se está revisando con las repeticiones de la(s) moda(s)
 const compareModas = (modaReview, repeatModalCounter) => {
-	// Ejemplo:
-	// let modasArray = [17, 19, 20]; repedido 3 veces
-	// let verificando [18] contador de la nueva moda = 4
-
-	// Ejemplo 2:
-	// let modasArray = [17, 19, 20]; repedido 3 veces
-	// let verificando [18] contador de la nueva moda = 3
 
 	if (repeatModalCounter > modasRepeatTimes) {
 		// Si el valor que se está revisando se repite más veces que la(s) moda(s), se reinicia el arreglo de modas, se guarda el valor que se está revisando y se guarda cuantas veces se repite.
