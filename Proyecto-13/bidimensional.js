@@ -1,67 +1,93 @@
-// Crear un arrayeglo bidimensional de 8x8
-let array = new Array(8);
-for (let i = 0; i < array.length; i++) {
-	array[i] = new Array(8);
-}
+// Crear un arreglo bidimensional de 8x8
+const createArray = () => {
 
-// Rellenar el arrayeglo con números aleatorios del 1 al 19
-for (let i = 0; i < array.length; i++) {
-	for (let j = 0; j < array[i].length; j++) {
-		array[i][j] = (Math.random() * 15).toFixed(1);
-		// process.stdout.write(`${array[i][j]} \t`);
+	// Crear un arreglo bidimensional de 8x8
+	let array = new Array(8);
+	for (let i = 0; i < array.length; i++) {
+		array[i] = new Array(8);
 	}
-	// console.log(' \n');
-}
 
-// Guardar las modas
-let modas = [];
-let modalRepeatTimes = 0;
-
-let repeatCounter = 0;
-
-const modaExecute = () => {
-	// Recorrer el arrayeglo bidimensional
-	for (let row = 0; row < array.length; row++) {
-		for (let column = 0; column < array.length; column++) {
-			let modaReview = array[row][column];
-			countModas(modaReview);
-			compareModas(modaReview, repeatCounter);
+	// Rellenar el arreglo con números aleatorios del 1 al 15
+	for (let i = 0; i < array.length; i++) {
+		for (let j = 0; j < array[i].length; j++) {
+			array[i][j] = (Math.random() * 15).toFixed(1);
+			process.stdout.write(`${array[i][j]} \t`);
 		}
-    console.log(repeatCounter)
-    repeatCounter = 0;
+		console.log(' \n');
 	}
-  console.log(`La(s) moda(s) es(son): ${modas}`);
-  console.log(`Se repite(n) ${modalRepeatTimes} veces`);
+	return array;
 };
 
-const countModas = (modaReview) => {
-	for (let row = 0; row < array.length; row++) {
-		for (let column = 0; column < array.length; column++) {
-			if (modaReview == array[row][column]) {
-				repeatCounter++;
+const array = createArray();
+// Guardar el(los) moda(s) en un arreglo
+let modasArray = [];
+// Guardar cuantas veces se repite(n) la(s) moda(s)
+let modasRepeatTimes = 0;
+// Contador de repeticiones de el valor que se está revisando
+let repeatModalCounter = 0;
+
+const modaExecute = (array) => {
+	array.forEach((row) => {
+		row.forEach((value) => {
+			// Variable que guarda el valor que se está revisando
+			let modaReview = value;
+
+			// Si el valor no existe en el arreglo de modas, se cuenta cuantas veces se repite
+			if (!modaExists(modaReview)) {
+				// Se reinicia el contador de repeticiones
+				repeatModalCounter = 0;
+
+				// Se cuentan las repeticiones
+				countRepeatingOfModal(modaReview);
+				compareModas(modaReview, repeatModalCounter);
 			}
-		}
+		});
+	});
+
+	console.log(`La(s) moda(s) es(son): ${modasArray}`);
+	console.log(`Se repite(n) ${modasRepeatTimes} veces`);
+};
+
+// Funciones auxiliares
+
+// Cuenta cuantas veces se repite el valor que se está revisando
+const countRepeatingOfModal = (modaReview) => {
+	array.forEach((row) => {
+		row.forEach((value) => {
+			// Si el valor que se está revisando es igual al valor que se está revisando, se aumenta el contador
+			if (modaReview == value) {
+				repeatModalCounter++;
+			}
+		});
+	});
+};
+
+// Compara las repeticiones del valor que se está revisando con las repeticiones de la(s) moda(s)
+const compareModas = (modaReview, repeatModalCounter) => {
+	if (repeatModalCounter > modasRepeatTimes) {
+		// Si el valor que se está revisando se repite más veces que la(s) moda(s), se reinicia el arreglo de modas, se guarda el valor que se está revisando y se guarda cuantas veces se repite
+		restartModa();
+		modasRepeatTimes = repeatModalCounter;
+		addModa(modaReview);
+	} else if (repeatModalCounter == modasRepeatTimes) {
+		// Si el valor que se está revisando se repite la misma cantidad de veces que la(s) moda(s), se guarda el valor que se está revisando
+		addModa(modaReview);
 	}
 };
 
-const compareModas = (modaReview, repeatCounter) => {
-	if (repeatCounter > modalRepeatTimes) {
-		removeModa();
-		addModa(modaReview);
-	} else if (repeatCounter == modalRepeatTimes) {
-		addModa(modaReview);
-	} else {
-    return;
-  }
+// Verifica si el valor que se está revisando ya existe en el arreglo de modas
+const modaExists = (modaReview) => {
+	return modasArray.includes(modaReview);
 };
 
+// Agrega el valor que se está revisando al arreglo de modas
 const addModa = (modaReview) => {
-	modas.push(modaReview);
+	modasArray.push(modaReview);
 };
 
-const removeModa = () => {
-	modas.splice(0, modas.length);
+// Reinicia el arreglo de modas
+const restartModa = () => {
+	modasArray.splice(0, modasArray.length);
 };
 
-
-modaExecute();
+modaExecute(array);
