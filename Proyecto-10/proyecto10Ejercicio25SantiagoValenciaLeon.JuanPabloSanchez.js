@@ -28,28 +28,28 @@ Descripción: Este programa imprime las letras Z como un rombo.
 */
 
 // Función que imprime en pantalla
-function print(message) {
+const print = (message) => {
 	process.stdout.write(message);
-}
+};
 
 // Función que imprime Z cantidad de veces
-function ImprimirZ(Inicio, Final) {
+const ImprimirZ = (Inicio, Final) => {
 	if (Inicio <= Final) {
 		print('Z');
 		ImprimirZ(Inicio + 1, Final);
 	}
-}
+};
 
 // Función que imprime espacios
-function ImprimirEsp(Inicio, Final) {
+const ImprimirEsp = (Inicio, Final) => {
 	if (Inicio <= Final) {
 		print(' ');
 		ImprimirEsp(Inicio + 1, Final);
 	}
-}
+};
 
 // Función que imprime la matriz
-function Imprimir(Fila, Contador, Final, FinalZ) {
+const Imprimir = (Fila, Contador, Final, FinalZ) => {
 	if (Fila <= 3) {
 		ImprimirEsp(Contador, Final);
 		ImprimirZ(Contador, FinalZ);
@@ -61,6 +61,6 @@ function Imprimir(Fila, Contador, Final, FinalZ) {
 		print('\n');
 		Imprimir(Fila + 1, Contador, Final + 1, FinalZ - 2);
 	}
-}
+};
 
 Imprimir(1, 1, 9, 1);

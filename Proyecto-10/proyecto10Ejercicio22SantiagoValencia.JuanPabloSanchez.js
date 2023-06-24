@@ -30,41 +30,37 @@ Programa de Ingeniería de Sistemas y Computacion
 Descripción: Este programa genera una impresion por pantalla de un triangulo de Ps
 */
 
-const print = (message) =>{
-    process.stdout.write(message);
-  }
-  
-  function ImprimirP(Inicio, Final) {
-    if (Inicio <= Final) {
-      print("P");
-      ImprimirP(Inicio + 1, Final);
-    } else {
-      return;
-    }
-  }
-  
-  function ImprimirEsp(Inicio, Final) {
-    if (Inicio <= Final) {
-      print(" ");
-      ImprimirEsp(Inicio, Final - 1);
-    } else {
-      return;
-    }
-  }
-  
-  function Imprimir(Fila, Contador, Final, FinalP) {
-    if (Fila <= 7) {
-      ImprimirEsp(Contador, Final);
-      ImprimirP(Contador, FinalP);
-      print("\n");
-      Imprimir(Fila + 1, Contador, Final + 1, FinalP - 2);
-    } else {
-      return;
-    }
-  }
-  
-  Imprimir(1, 1, 34, 13);
+const print = (message) => {
+	process.stdout.write(message);
+};
 
+const ImprimirP = (Inicio, Final) => {
+	if (Inicio <= Final) {
+		print('P');
+		ImprimirP(Inicio + 1, Final);
+	} else {
+		return;
+	}
+};
 
+const ImprimirEsp = (Inicio, Final) => {
+	if (Inicio <= Final) {
+		print(' ');
+		ImprimirEsp(Inicio, Final - 1);
+	} else {
+		return;
+	}
+};
 
+const Imprimir = (Fila, Contador, Final, FinalP) => {
+	if (Fila <= 7) {
+		ImprimirEsp(Contador, Final);
+		ImprimirP(Contador, FinalP);
+		print('\n');
+		Imprimir(Fila + 1, Contador, Final + 1, FinalP - 2);
+	} else {
+		return;
+	}
+};
 
+Imprimir(1, 1, 34, 13);

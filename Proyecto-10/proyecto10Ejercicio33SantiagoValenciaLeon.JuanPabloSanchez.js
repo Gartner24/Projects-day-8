@@ -22,12 +22,12 @@ Descripción: El siguiente programa genera la suma de la serie de Taylor para In
 const prompt = require('prompt-sync')({ sigint: true });
 
 // Función que imprime en consola
-function print(message) {
+const print = (message) => {
 	process.stdout.write(message);
-}
+};
 
 // Función que calcula la serie de Taylor para In(x)
-async function Inx(numero, final, acumula) {
+const Inx = async (numero, final, acumula) => {
 	if (numero <= final) {
 		const term =
 			(Math.pow(-1, numero + 2) * Math.pow(x - 1, numero + 1)) /
@@ -36,7 +36,7 @@ async function Inx(numero, final, acumula) {
 	} else {
 		print((x - 1 + acumula).toString());
 	}
-}
+};
 
 // Se pide el valor de x y el número de términos
 print('Este programa genera la suma de la serie de Taylor para In(x)\n');

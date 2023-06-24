@@ -18,47 +18,43 @@ Programa de Ingeniería de Sistemas y Computacion
 Descripción: Este programa genera una impresion por pantalla de dos diagonales de Zs
 */
 
-const print = (message) =>{
-    process.stdout.write(message);
-  }
-  
-  function ImprimirZ(Inicio, Final) {
-    if (Inicio <= Final) {
-      print("Z");
-      ImprimirZ(Inicio + 1, Final);
-    } else {
-      return;
-    }
-  }
-  
-  function ImprimirEsp(Inicio, Final) {
-    if (Inicio <= Final) {
-      print(" ");
-      ImprimirEsp(Inicio + 1, Final);
-    } else {
-      return;
-    }
-  }
-  
-  function Imprimir(Fila, Contador, Final, FinalZ) {
-    if (Fila <= 10) {
-      ImprimirEsp(Contador, FinalZ);
-      ImprimirZ(1, 1);
-      ImprimirEsp(Contador, Final);
-      if (Fila === 10) {
-        return;
-      } else {
-        ImprimirZ(1, 1);
-      }
-      print("\n");
-      Imprimir(Fila + 1, Contador, Final - 2, FinalZ + 1);
-    } else {
-      return;
-    }
-  }
-  
-  Imprimir(1, 1, 17, 0);
+const print = (message) => {
+	process.stdout.write(message);
+};
 
+const ImprimirZ = (Inicio, Final) => {
+	if (Inicio <= Final) {
+		print('Z');
+		ImprimirZ(Inicio + 1, Final);
+	} else {
+		return;
+	}
+};
 
+const ImprimirEsp = (Inicio, Final) => {
+	if (Inicio <= Final) {
+		print(' ');
+		ImprimirEsp(Inicio + 1, Final);
+	} else {
+		return;
+	}
+};
 
+const Imprimir = (Fila, Contador, Final, FinalZ) => {
+	if (Fila <= 10) {
+		ImprimirEsp(Contador, FinalZ);
+		ImprimirZ(1, 1);
+		ImprimirEsp(Contador, Final);
+		if (Fila === 10) {
+			return;
+		} else {
+			ImprimirZ(1, 1);
+		}
+		print('\n');
+		Imprimir(Fila + 1, Contador, Final - 2, FinalZ + 1);
+	} else {
+		return;
+	}
+};
 
+Imprimir(1, 1, 17, 0);

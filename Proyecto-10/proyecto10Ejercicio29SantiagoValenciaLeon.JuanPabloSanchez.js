@@ -22,28 +22,28 @@ Descripción: El siguiente programa genera la suma de la serie de Taylor para (e
 const prompt = require('prompt-sync')({ sigint: true });
 
 // Función que imprime en consola
-function print(message) {
+const print = (message) => {
 	process.stdout.write(message);
-}
+};
 
 // Función que calcula el factorial de un número
-function Factorial(number) {
+const Factorial = (number) => {
 	if (number === 0) {
 		return 1;
 	} else {
 		return number * Factorial(number - 1);
 	}
-}
+};
 
 // Función que calcula la serie de Taylor para (e^x)
-function ex(numero, final, acumula) {
+const ex = (numero, final, acumula) => {
 	if (numero < final) {
 		const term = Math.pow(x, numero + 1) / Factorial(numero + 1);
 		return ex(numero + 1, final, acumula + term);
 	} else {
 		print((acumula + 1).toString());
 	}
-}
+};
 
 // Se pide el valor de x y el número de términos
 print('Este programa genera la suma de la serie de Taylor para (e^x)\n');
