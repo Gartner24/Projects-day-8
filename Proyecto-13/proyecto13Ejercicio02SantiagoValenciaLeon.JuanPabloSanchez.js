@@ -34,7 +34,7 @@ const generarLaberinto = (laberinto) => {
 				laberinto[fila][columna] = 0;
 			// Llena aleatoriamente el interior con muros o espacios en blanco (probabilidad de espacio en blanco: 75%)
 			else {
-				if (Math.floor(Math.random() * 4) === 0)
+				if (Math.floor(Math.random() * 3) === 0)
 					laberinto[fila][columna] = 0; // Muro
 				else laberinto[fila][columna] = 1; // Espacio en blanco
 			}
@@ -45,6 +45,7 @@ const generarLaberinto = (laberinto) => {
 	laberinto[0][1] = 1;
 	laberinto[1][0] = 1;
 	laberinto[1][1] = 1;
+
 	// Establece la salida en una posición aleatoria
 	laberinto[Math.floor(Math.random() * 28) + 1][29] = 2;
 };
@@ -135,5 +136,11 @@ const main = () => {
 	imprimirLaberinto(laberinto); // Imprime el laberinto sin resolver
 	imprimir(laberinto, buscarSolucion(laberinto, 0, 0)); // Busca y muestra la solución del laberinto
 };
+
+// 0 = Muro
+// 1 = Espacio en blanco
+// 2 = Salida
+// 3 = Camino de la solución
+// 4 = Visitado pero sin solución
 
 main();

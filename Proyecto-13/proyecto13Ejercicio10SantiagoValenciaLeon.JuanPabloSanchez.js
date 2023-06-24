@@ -186,7 +186,7 @@ const promedioArreglo = () => {
 			cont += parseFloat(number);
 		});
 	});
-	return (cont / 8).toFixed(1);
+	return (cont / 64).toFixed(1);
 };
 
 // Funcion que calcula la suma de la diagonal superior

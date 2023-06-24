@@ -34,8 +34,9 @@ const imprimirHorizontal = (ancho, stop, charExtremoIzquierdo, charMedio, charEx
       imprimirHorizontal(ancho - 1, stop, charExtremoIzquierdo, charMedio, charExtremoDerecha);
     }
 };
-  
+
 const imprimirVertical = (ancho, alto, stop) => {
+  // alto == stop porque es el valor que no se debe pasar
     if (alto === stop) {
       imprimirHorizontal(ancho, ancho, '/', '*', '\\');
       process.stdout.write('\n');
@@ -58,4 +59,5 @@ const rush = (ancho, alto) => {
   
 ancho = prompt("Ingrese el ancho: ");
 alto = prompt("Ingrese el alto: ")
+
 rush(ancho, alto);
