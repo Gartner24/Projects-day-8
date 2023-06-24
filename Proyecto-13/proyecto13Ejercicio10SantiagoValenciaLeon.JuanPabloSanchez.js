@@ -1,3 +1,46 @@
+/*EJERCICIO 01 - PROYECTO 13
+Ejercicio 10:- En un arreglo bidimensional de 8 x 8:
+Diagonal principal, elementos: 0,0 1,1 2,2 3,3 4,4 5,5 6,6 7,7
+Construya un programa, utilizando funciones para cada caso, tal que:
+1.- Genere un arreglo de tipo float bidimensional de 8 x 8 - con números aleatorios entre 0.0 y 15.0 con un decimal
+e imprimirlo en pantalla de forma ordenada; por ejemplo:
+Elementos aleatorios(generados)
+7.4 8.2 9.1 10.9 0.0 3.3 5.1 6.1
+2.0 10.0 1.6 15.0 10.1 1.4 1.8 3.4
+3.0 2.9 1.9 12.9 9.1 4.5 2.3 2.7
+5.4 3.1 2.0 13.3 8.2 2.6 3.5 3.6
+4.3 8.3 1.7 1.6 4.6 8.5 4.7 8.2
+6.1 6.0 2.5 2.8 12.9 11.9 3.8 1.5
+7.0 3.5 1.9 1.9 11.0 12.0 14.0 1.7
+8.2 2.9 13.0 14.7 5.7 1.8 12.6 1.9
+
+Los colores son solo de referencia
+
+Construya solo funciones tipo flecha.
+2.- Moda: El valor que mas se repite en el arreglo e indique cuantas veces esta.
+Ejemplo: Para esta secuencia de números aleatorios hay dos(2) modas
+Imprimiría: Moda 8.2 esta 4 veces. Moda 1.9 esta 4 veces.
+3.- El promedio(a un decimal) de cada fila y de cada columna
+4.- La (suma de la diagonal superior menos (-) la suma de la inferior) / promedio(a un decimal) del arreglo.
+e.- Calcule e imprima en forma ordenada, un arreglo que contenga los factoriales de la parte entera de todos los
+valores generados en el enciso a.
+5.- Indique cuantas veces se encuentra el promedio.
+6.- El promedio de los valores más altos de cada fila y cada columna
+-----------------------------------------------------------------
+Fecha de publicación: 20-06-2023
+Hora: 06:00 p.m
+Versión: 1.0
+Autores: Ing(c) Santiago Valencia, Ing(c) Juan Pablo Sánchez
+Lenguaje: JavaScript
+Versión del lenguaje: 6.0
+Presentado a: Doctor Ricardo Moreno Laverde
+-----------------------------------------------------------------
+Universidad Tecnológica de Pereira
+Programa de Ingeniería de Sistemas y Computación
+-----------------------------------------------------------------
+Descripción: Este programa imprime un rectángulo de x caracteres para el ancho, y de y caracteres para la longitud. Y se encuentran sus modas, promedios, etc.
+*/
+
 // 1.- Genere un arreglo de tipo float bidimensional de 8 x 8 - con números aleatorios entre 0.0 y 15.0 con un decimal
 // e imprimirlo en pantalla de forma ordenada; por ejemplo:
 

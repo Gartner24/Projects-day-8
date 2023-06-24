@@ -21,12 +21,9 @@ Programa de Ingeniería de Sistemas y Computación
 -----------------------------------------------------------------
 Descripción: Este programa imprime un rectángulo de x caracteres para el ancho, y de y caracteres para la longitud.
 */
+var prompt = require('prompt-sync')();
 
-let prompt = require('prompt-sync')();
-
-// Función que imprime una línea horizontal
 const imprimirHorizontal = (ancho, stop, charExtremoIzquierdo, charMedio, charExtremoDerecha) => {
-    // Casos base
     if (ancho === 1 && stop !== 1) {
       process.stdout.write(charExtremoDerecha);
     } else if (ancho === stop) {
@@ -37,8 +34,7 @@ const imprimirHorizontal = (ancho, stop, charExtremoIzquierdo, charMedio, charEx
       imprimirHorizontal(ancho - 1, stop, charExtremoIzquierdo, charMedio, charExtremoDerecha);
     }
 };
-
-// Función que imprime una línea vertical
+  
 const imprimirVertical = (ancho, alto, stop) => {
     if (alto === stop) {
       imprimirHorizontal(ancho, ancho, '/', '*', '\\');
@@ -54,7 +50,6 @@ const imprimirVertical = (ancho, alto, stop) => {
     }
 };
   
-// Función principal
 const rush = (ancho, alto) => {
     if (ancho > 0 && alto > 0) {
       imprimirVertical(ancho, alto, alto);
