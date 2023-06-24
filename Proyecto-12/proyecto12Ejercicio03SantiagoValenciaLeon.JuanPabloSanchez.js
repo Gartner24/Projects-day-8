@@ -3,7 +3,7 @@
 imprima al revés.
 -----------------------------------------------------------------
 Fecha de publicación: 24-06-2023
-Hora: 00:44 p.m
+Hora: 00:44 a.m
 Versión: 1.0
 Autores: Ing(c) Santiago Valencia, Ing(c) Juan Pablo Sánchez
 Lenguaje: JavaScript
