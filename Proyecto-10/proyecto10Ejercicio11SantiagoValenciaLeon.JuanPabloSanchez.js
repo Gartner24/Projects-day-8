@@ -21,23 +21,26 @@ Programa de Ingeniería de Sistemas y Computación
 Descripción: Este programa pide el número de termino deseados en la serie triangular.
 */
 
-const prompt = require("prompt-sync")({sigint: true});
+const prompt = require('prompt-sync')({ sigint: true });
 
 // Variable que almacena el numero de terminos deseados
-let num = prompt("Ingrese el numero de terminos deseados: ");
+let num = prompt('Ingrese el numero de terminos deseados: ');
 
 // Funcion que calcula la serie triangular
 const triangular = (num) => {
-    if (num == 0) return 1;
-    return triangular(num - 1) + (num - 1) * triangular(num - 2);
-}
+	if (num == 0) {
+		return 0;
+	} else {
+		return num + triangular(num - 1);
+	}
+};
 
-// Funcion que imprime la serie triangular
-const imprimirTriangular = (num) => {
-    if (triangular(num) <= 10000 && num > 0) {
-        console.log(triangular(num));
-        imprimirTriangular(num - 1);
-    }
-}
+// funcion recursiva que imprime la serie triangular
+const imprimirTriangular = (num, count) => {
+	process.stdout.write(triangular(count) + ' ');
+	if (count < num) {
+		imprimirTriangular(num, count + 1);
+	}
+};
 
-imprimirTriangular(num);
+imprimirTriangular(num - 1, 0);
