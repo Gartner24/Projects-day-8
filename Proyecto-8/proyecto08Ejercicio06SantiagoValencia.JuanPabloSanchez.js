@@ -18,19 +18,12 @@ Descripción: Este programa recibe el numero de minutos e imprime el total de ho
 
 const prompt = require('prompt-sync')({ sigint: true });
 
+// Función que convierte minutos a horas y minutos
 const convertirMinutosAHorasMinutos = () => {
 	let cantidadMinutos = prompt('Por favor digite la cantidad de minutos: '); //Variable que recibe la cantidad de minutos a convertir
 
 	let cantidadHoras = Math.floor(cantidadMinutos / 60); //Toma la parte entera como las horas
 	let cantidadFinalMinutos = cantidadMinutos % 60; //Toma el resto de la división como la cantidad final de minutos
-	console.log(
-		cantidadMinutos +
-			' minutos equivalen a ' +
-			cantidadHoras +
-			' horas y ' +
-			cantidadFinalMinutos +
-			' minutos.'
-	);
 	console.log(
 		`${cantidadMinutos} minutos equivalen a ${cantidadHoras} horas y ${cantidadFinalMinutos} minutos.`
 	);
