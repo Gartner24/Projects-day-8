@@ -7,7 +7,7 @@ diferentes a cero(validar este requisito) y al final de leídos, imprima:
 * Promedio de los Positivos Encontrados.
 -----------------------------------------------------------------
 Fecha de publicación: 24-06-2023
-Hora: 00:47 p.m
+Hora: 00:47 a.m
 Versión: 2.0
 Autores: Ing(c) Santiago Valencia, Ing(c) Juan Pablo Sánchez
 Lenguaje: JavaScript

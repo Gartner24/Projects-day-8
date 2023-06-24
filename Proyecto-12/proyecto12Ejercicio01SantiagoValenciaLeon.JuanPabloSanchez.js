@@ -5,7 +5,7 @@ Hacer un programa de computador, de tal manera que presente la serie de Fibonacc
 sobrepasar el número 10,000.
 -----------------------------------------------------------------
 Fecha de publicación: 24-06-2023
-Hora: 00:18 p.m
+Hora: 00:18 a.m
 Versión: 2.0
 Autores: Ing(c) Santiago Valencia, Ing(c) Juan Pablo Sánchez
 Lenguaje: JavaScript

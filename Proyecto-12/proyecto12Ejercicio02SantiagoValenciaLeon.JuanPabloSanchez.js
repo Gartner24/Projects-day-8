@@ -2,8 +2,8 @@
 2.Hacer un programa de computador, de tal manera que imprima el valor de la suma de los elementos
 de la serie de Fibonacci entre 0 y 100.
 -----------------------------------------------------------------
-Fecha de publicación: 23-06-2023
-Hora: 00:31 p.m
+Fecha de publicación: 24-06-2023
+Hora: 00:31 a.m
 Versión: 2.0
 Autores: Ing(c) Santiago Valencia, Ing(c) Juan Pablo Sánchez
 Lenguaje: JavaScript
