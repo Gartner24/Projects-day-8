@@ -26,7 +26,8 @@ const prompt = require("prompt-sync")({sigint: true});//Activa el prompt para po
 let terms = prompt("Ingrese la cantidad de terminos que desea visualizar: ");//Pide por teclado la variable de terminos de la serie
 
 const motzkin = (firstNumber, secondNumber, n, count) => {//Funcion que recibe como parametros los dos primeros terminos de la serie, el termino desde el que empieza a realizar la operacion y un contador para saber hasta donde se realiza la iteracion
-    console.log(firstNumber);//first number se actualiza con el siguiente termino de la serie, por lo tanto debe ser mostrado
+	process.stdout.write(firstNumber + " ");//Se muestra el termino actual de la serie sin salto de linea
+    
     if(n <= count){
        motzkin(secondNumber, (((3 * (n - 1) * firstNumber) + (((2 * n) + 1) * secondNumber)) / (n + 2)), (n + 1), count);
     }
