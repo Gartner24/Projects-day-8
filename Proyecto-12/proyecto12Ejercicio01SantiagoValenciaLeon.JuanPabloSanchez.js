@@ -4,8 +4,8 @@ progresivamente los dos últimos elementos de la serie, así: 0 1 1 2 3 5 8 13 2
 Hacer un programa de computador, de tal manera que presente la serie de Fibonacci hasta llegar sin
 sobrepasar el número 10,000.
 -----------------------------------------------------------------
-Fecha de publicación: 23-06-2023
-Hora: 17:27 p.m
+Fecha de publicación: 24-06-2023
+Hora: 00:18 p.m
 Versión: 2.0
 Autores: Ing(c) Santiago Valencia, Ing(c) Juan Pablo Sánchez
 Lenguaje: JavaScript
@@ -17,23 +17,22 @@ Programa de Ingeniería de Sistemas y Computación
 -----------------------------------------------------------------
 Descripción: Este programa presenta la serie de Fibonacci hasta llegar sin sobrepasar el número 10000*/
 
-var prompt = require('prompt-sync')(); //variable prompt global declarada para utilizar prompt node.js 
-
-function fibonacciSerie() {//funcion principal de la serie de fibonacci
-    let x = 1;//valores iniciales de la serie 
-    let y = 0;//valores iniciales de la serie
-    let z = 1;//variable auxiliar
+const fibonacciSequence = () =>{//funcion principal de la serie de fibonacci
+    let currentNumber = 1;//valores iniciales de la serie 
+    let previousNumber = 0;//valores iniciales de la serie
+    let nextNumber = 1;//variable auxiliar
   
     console.log("Este programa presenta la serie de Fibonacci como la serie que comienza con los dígitos 1 y 0 y va");
     console.log("sumando progresivamente los dos últimos elementos de la serie, así: 0 1 1 2 3 5 8 13 21 34.......");
-    console.log("Para este programa, se presentará la serie de Fibonacci hasta llegar sin sobrepasar el número 10,000:\n0  1");
+    process.stdout.write("Para este programa, se presentará la serie de Fibonacci hasta llegar sin sobrepasar el número 10,000:\n0, ");
     
-    while (z <= 10000) {//ciclo while para la serie de fibonacci sin pasar el numero 10000
-      console.log(z + " ");
-      z = x + y;
-      x = y;
-      y = z;
+    while (nextNumber <= 10000) {//ciclo while para la serie de fibonacci sin pasar el numero 10000
+      process.stdout.write(`${nextNumber}, `);
+      //Se actualizan las variables
+      nextNumber = currentNumber + previousNumber;
+      previousNumber = currentNumber;
+      currentNumber = nextNumber;
     }
   }
   
-  fibonacciSerie();
+  fibonacciSequence();
