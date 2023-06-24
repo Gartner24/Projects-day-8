@@ -15,19 +15,18 @@ Programa de Ingeniería de Sistemas y Computación
 -----------------------------------------------------------------
 Descripción: Este programa encuentra el valor del ángulo faltante de un triángulo si toma el valor de los otros dos ángulos como datos de entrada.
 */
-const prompt = require("prompt-sync")({sigint: true});
+const prompt = require('prompt-sync')({ sigint: true });
 
 // Variables que almacena los dos angulos
-let angulo1 = prompt("Ingrese el angulo 1: ");
-let angulo2 = prompt("Ingrese el angulo 2: ");
+let angulo1 = prompt('Ingrese el angulo 1: ');
+let angulo2 = prompt('Ingrese el angulo 2: ');
 // Variable que almacena el angulo faltante
 let angulo3 = 0;
 
 // Función que encuentra el angulo faltante
 function encontrarAngulo(angulo1, angulo2) {
-    angulo3 = 180 - (angulo1 + angulo2);
-    return angulo3; 
+	angulo3 = 180 - (angulo1 + angulo2);
+	return angulo3;
 }
 
 console.log(encontrarAngulo(angulo1, angulo2));
-

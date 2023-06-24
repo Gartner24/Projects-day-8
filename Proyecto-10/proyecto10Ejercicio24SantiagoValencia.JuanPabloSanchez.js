@@ -18,55 +18,51 @@ Programa de Ingeniería de Sistemas y Computacion
 Descripción: Este programa genera una impresion por pantalla de dos triangulos de As
 */
 
-const print = (message) =>{
-  process.stdout.write(message);
-}
+const print = (message) => {
+	process.stdout.write(message);
+};
 
-function ImprimirA(Inicio, Final) {
-  if (Inicio <= Final) {
-    print("A");
-    ImprimirA(Inicio + 1, Final);
-  } else {
-    return;
-  }
-}
+const ImprimirA = (Inicio, Final) => {
+	if (Inicio <= Final) {
+		print('A');
+		ImprimirA(Inicio + 1, Final);
+	} else {
+		return;
+	}
+};
 
-function ImprimirEsp(Inicio, Final) {
-  if (Inicio <= Final) {
-    print(" ");
-    ImprimirEsp(Inicio + 1, Final);
-  } else {
-    return;
-  }
-}
+const ImprimirEsp = (Inicio, Final) => {
+	if (Inicio <= Final) {
+		print(' ');
+		ImprimirEsp(Inicio + 1, Final);
+	} else {
+		return;
+	}
+};
 
-function Imprimir(Fila, Contador, Final, FinalA) {
-  if (Fila <= 3) {
-    ImprimirEsp(1, 27);
-    ImprimirA(Contador, Final);
-    ImprimirEsp(Contador, FinalA);
-    ImprimirA(Contador, Final);
-    print("\n");
-    Imprimir(Fila + 1, Contador, Final + 1, FinalA - 2);
-  } else if (Fila <= 4) {
-    ImprimirEsp(1, 27);
-    print("AAAAAAA");
-    print("\n");
-    Imprimir(Fila + 1, Contador, Final - 1, FinalA + 2);
-  } else if (Fila <= 7) {
-    ImprimirEsp(1, 27);
-    ImprimirA(Contador, Final);
-    ImprimirEsp(Contador, FinalA);
-    ImprimirA(Contador, Final);
-    print("\n");
-    Imprimir(Fila + 1, Contador, Final - 1, FinalA + 2);
-  } else {
-    return;
-  }
-}
+const Imprimir = (Fila, Contador, Final, FinalA) => {
+	if (Fila <= 3) {
+		ImprimirEsp(1, 27);
+		ImprimirA(Contador, Final);
+		ImprimirEsp(Contador, FinalA);
+		ImprimirA(Contador, Final);
+		print('\n');
+		Imprimir(Fila + 1, Contador, Final + 1, FinalA - 2);
+	} else if (Fila <= 4) {
+		ImprimirEsp(1, 27);
+		print('AAAAAAA');
+		print('\n');
+		Imprimir(Fila + 1, Contador, Final - 1, FinalA + 2);
+	} else if (Fila <= 7) {
+		ImprimirEsp(1, 27);
+		ImprimirA(Contador, Final);
+		ImprimirEsp(Contador, FinalA);
+		ImprimirA(Contador, Final);
+		print('\n');
+		Imprimir(Fila + 1, Contador, Final - 1, FinalA + 2);
+	} else {
+		return;
+	}
+};
 
 Imprimir(1, 1, 1, 5);
-
-
-
-

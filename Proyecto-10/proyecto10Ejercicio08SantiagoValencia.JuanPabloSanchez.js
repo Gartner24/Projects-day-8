@@ -21,29 +21,34 @@ Programa de Ingeniería de Sistemas y Computacion
 ------------------------------------------------------
 Descripción: Este programa muestra los n terminos de la serie de Catalán*/
 
-const prompt = require("prompt-sync")({sigint: true});//Activa el prompt para poder pedir por consola un dato
-let terminos = prompt("Ingrese la cantidad de terminos que desea visualizar: ");//Pide por teclado la variable de terminos de la serie
-function print(message){
-    process.stdout.write(message);
+const prompt = require('prompt-sync')({ sigint: true }); //Activa el prompt para poder pedir por consola un dato
+let terminos = prompt('Ingrese la cantidad de terminos que desea visualizar: '); //Pide por teclado la variable de terminos de la serie
+
+function print(message) {
+	process.stdout.write(message);
 }
 
-const factorial = (terminos) =>{//Calcula el factorial de un numero n
-    if(terminos == 0) return 1;
-    else return terminos * factorial(terminos - 1);
-}
+// Funcion que calcula el factorial de un numero n
+const factorial = (terminos) => {
+	if (terminos == 0) return 1;
+	else return terminos * factorial(terminos - 1);
+};
 
+// Funcion que calcula la serie de Catalan
+const Catalan = (terminos) => {
+	if (terminos == 0) return 1;
+	return (
+		factorial(2 * terminos) /
+		(factorial(terminos) * factorial(terminos + 1))
+	); //Realiza la operacion para calcular el enesimo numero de la serie de Catalan
+};
 
-const Catalan = (terminos) =>{//Calcula los n-terminos de la serie de Catalan
-    if(terminos == 0) return 1;
-    return ((factorial(2 * terminos)) / (factorial(terminos) * factorial(terminos + 1)));//Realiza la operacion para calcular el enesimo numero de la serie de Catalan
-}
+// Funcion que imprime la serie de Catalan cantidadTerminos veces
+const repeatFunction = (terminos) => {
+	if (terminos >= 0) {
+		repeatFunction(terminos - 1); //Se devuelve desde el enésimo término hasta ser menor o igual a cero
+		print(Catalan(terminos) + ' '); //Cada proceso de devolverse lo va mostrando con la funcion de la serie de Catalan
+	}
+};
 
-const repeatFunction = (terminos) =>{
-    if(terminos >= 0){
-        repeatFunction(terminos - 1);//Se devuelve desde el enésimo término hasta ser menor o igual a cero
-        print(Catalan(terminos) + " ");//Cada proceso de devolverse lo va mostrando con la funcion de la serie de Catalan
-    }
-}
-
-repeatFunction(terminos - 1)//Llamado a la funcion de repetición
-
+repeatFunction(terminos - 1); //Llamado a la funcion de repetición

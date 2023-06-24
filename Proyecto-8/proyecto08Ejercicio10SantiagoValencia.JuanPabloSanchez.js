@@ -17,11 +17,11 @@ Descripción: Este programa convierte mph a m/s
 */
 
 //const prompt=require("prompt-sync")({sigint:true});
-function convertirMphAMs(){
-    //let millasPorHora = prompt("Por favor digite la cantidad de mph que desea covnertir a m/s:");
-    let millasPorHora = 30;
-    let resultado = (millasPorHora * 1609.344) / 3600;
-    console.log(millasPorHora + " mph equivalen a " + resultado + " m/s");
+function convertirMphAMs() {
+	//let millasPorHora = prompt("Por favor digite la cantidad de mph que desea covnertir a m/s:");
+	let millasPorHora = 30;
+	let resultado = (millasPorHora * 1609.344) / 3600;
+	console.log(`${millasPorHora} mph equivalen a ${resultado} m/s`);
 }
 
 convertirMphAMs();

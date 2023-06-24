@@ -18,19 +18,19 @@ Programa de Ingeniería de Sistemas y Computación
 -----------------------------------------------------------------
 Descripción: Este programa calcula cuantas calorías consume una persona durante todo el tiempo que realice una misma actividad.
 */
-const prompt = require("prompt-sync")({sigint: true});
+const prompt = require('prompt-sync')({ sigint: true });
 
 // Variables que almacena la actividad y el tiempo de la actividad
-let actividad = prompt("Ingrese la actividad a realizar: ");
-let tiempo = prompt("Ingrese el tiempo de la actividad: ");
+let actividad = prompt('Ingrese la actividad a realizar: ');
+let tiempo = prompt('Ingrese el tiempo de la actividad: ');
 
 // Función que calcula cuantas calorías consume una persona durante todo el tiempo que realice una misma actividad.
-function calcularCalorias (actividad, tiempo) {
-    let calorias;
-    actividad = actividad.toLowerCase();
-    if(actividad == "dormir") calorias = tiempo * 1.08;
-    if(actividad == "reposo") calorias = tiempo * 1.66;
-    console.log(calorias);
-}
+const calcularCalorias = (actividad, tiempo) => {
+	let calorias;
+	actividad = actividad.toLowerCase();
+	if (actividad == 'dormir') calorias = tiempo * 1.08;
+	if (actividad == 'reposo') calorias = tiempo * 1.66;
+	console.log(calorias);
+};
 
-calcularCalorias(actividad, tiempo)
+calcularCalorias(actividad, tiempo);

@@ -22,7 +22,7 @@ let number = prompt("Ingrese el numero que desea invertir: ");//Pide por teclado
 
 const investNumber = (number) =>{
     if(number > 0){
-        console.log(number % 10);//Se imprimen los numeros dados por la funcion
+        process.stdout.write(number % 10 + " ");//Se imprimen los numeros dados por la funcion sin salto de linea
         investNumber(Math.floor(number / 10));//Llamado recursivo
     }
 }

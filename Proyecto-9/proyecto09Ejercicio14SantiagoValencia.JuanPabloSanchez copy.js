@@ -17,24 +17,30 @@ Programa de Ingeniería de Sistemas y Computación
 Descripción: Este programa calcula el descuento de un articulo con base a su clave
 */
 
-//const prompt=require("prompt-sync")({sigint:true});
-//let clave = prompt("Ingrese su clave: ");
-//let precioOriginal = prompt("Ingrese el precio original del articulo: ")
-let clave = 2;
-let precioOriginal = 30000;
-let precioDescuento = precioOriginal;
+const prompt = require('prompt-sync')({ sigint: true });
 
-function descuentoArticuloConClave(clave, precioOriginal){
-    let precioDescuento = precioOriginal;
-    if(clave == 1){
-        precioDescuento = precioOriginal - (precioOriginal * 0.1);
-        console.log("Clave: " + clave + "\nPrecio Original: $" + precioOriginal + "\nPrecio con descuento: $" + precioDescuento);
-    }else if(clave == 2){
-        precioDescuento = precioOriginal - (precioOriginal * 0.2);
-        console.log("Clave: " + clave + "\nPrecio Original: $" + precioOriginal + "\nPrecio con descuento: $" + precioDescuento);
-    }else{
-        console.log("Clave no existente.");
-    }
-}
+// Variables que almacenan la clave y el precio original
+let clave = prompt('Ingrese su clave: ');
+let precioOriginal = prompt('Ingrese el precio original del articulo: ');
+
+// Función que calcula el descuento de un articulo con base a su clave
+const descuentoArticuloConClave = (clave, precioOriginal) => {
+	let precioDescuento = precioOriginal;
+	if (clave == 1) {
+		// Se le aplica un descuento del 10%
+		precioDescuento = precioOriginal - precioOriginal * 0.1;
+		console.log(
+			`Clave: ${clave}\nPrecio Original: $${precioOriginal}\nPrecio con descuento: $${precioDescuento}`
+		);
+	} else if (clave == 2) {
+		// Se le aplica un descuento del 20%
+		precioDescuento = precioOriginal - precioOriginal * 0.2;
+		console.log(
+			`Clave: ${clave}\nPrecio Original: $${precioOriginal}\nPrecio con descuento: $${precioDescuento}`
+		);
+	} else {
+		console.log('Clave no existente.');
+	}
+};
 
 descuentoArticuloConClave(clave, precioOriginal);

@@ -30,28 +30,28 @@ Descripción: Este programa imprime las letras Z como una pirámide vacia.
 */
 
 // Función que imprime en pantalla
-function print(message) {
+const print = (message) => {
 	process.stdout.write(message);
-}
+};
 
 // Función que imprime Z cantidad de veces
-function ImprimirZ(Inicio, Final) {
+const ImprimirZ = (Inicio, Final) => {
 	if (Inicio <= Final) {
 		print('Z');
 		ImprimirZ(Inicio + 1, Final);
 	}
-}
+};
 
 // Función que imprime espacios
-function ImprimirEsp(Inicio, Final) {
+const ImprimirEsp = (Inicio, Final) => {
 	if (Inicio <= Final) {
 		print(' ');
 		ImprimirEsp(Inicio + 1, Final);
 	}
-}
+};
 
 // Función que imprime la matriz
-function Imprimir(Fila, Contador, Final, ContadorZ, FinalZ) {
+const Imprimir = (Fila, Contador, Final, ContadorZ, FinalZ) => {
 	if (Fila <= 10) {
 		ImprimirEsp(Contador, Final);
 		ImprimirZ(1, 1);
@@ -62,6 +62,6 @@ function Imprimir(Fila, Contador, Final, ContadorZ, FinalZ) {
 		print('\n');
 		Imprimir(Fila + 1, Contador, Final - 1, ContadorZ, FinalZ + 2);
 	}
-}
+};
 
 Imprimir(1, 1, 9, 2, 0);

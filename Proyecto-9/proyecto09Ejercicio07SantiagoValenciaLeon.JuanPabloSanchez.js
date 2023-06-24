@@ -15,16 +15,17 @@ Programa de Ingeniería de Sistemas y Computación
 -----------------------------------------------------------------
 Descripción: Este programa toma dos números y dice si ambos son pares o ambos son impares.
 */
-const prompt = require("prompt-sync")({sigint: true});
+const prompt = require('prompt-sync')({ sigint: true });
 
 // Variables que almacena los dos numeros
-let num1 = prompt("Ingrese el primer numero: ");
-let num2 = prompt("Ingrese el segundo numero: ");
+let num1 = prompt('Ingrese el primer numero: ');
+let num2 = prompt('Ingrese el segundo numero: ');
 
 // Función que determina si ambos numeros son pares o impares
-function parImpar(num1, num2) {
-    if (num1 % 2 == 0 && num2 % 2 == 0) console.log("Ambos numeros son pares");
-    if (num1 % 2 != 0 && num2 % 2 != 0) console.log("Ambos numeros son impares");
-}
+const parImpar = (num1, num2) => {
+	if (num1 % 2 == 0 && num2 % 2 == 0) console.log('Ambos numeros son pares');
+	if (num1 % 2 != 0 && num2 % 2 != 0)
+		console.log('Ambos numeros son impares');
+};
 
 parImpar(num1, num2);

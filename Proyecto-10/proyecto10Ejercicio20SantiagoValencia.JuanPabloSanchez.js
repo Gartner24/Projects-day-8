@@ -30,41 +30,37 @@ Programa de Ingeniería de Sistemas y Computacion
 ------------------------------------------------------
 Descripción: Este programa genera una impresion por pantalla de un triangulo de As
 */
-const print = (message) =>{
-  process.stdout.write(message);
-}
+const print = (message) => {
+	process.stdout.write(message);
+};
 
-function ImprimirA(Inicio, Final) {
-  if (Inicio <= Final) {
-    print("A");
-    ImprimirA(Inicio + 1, Final);
-  } else {
-    return;
-  }
-}
+const ImprimirA = (Inicio, Final) => {
+	if (Inicio <= Final) {
+		print('A');
+		ImprimirA(Inicio + 1, Final);
+	} else {
+		return;
+	}
+};
 
-function ImprimirEsp(Inicio, Final) {
-  if (Inicio <= Final) {
-    print(" ");
-    ImprimirEsp(Inicio + 1, Final);
-  } else {
-    return;
-  }
-}
+const ImprimirEsp = (Inicio, Final) => {
+	if (Inicio <= Final) {
+		print(' ');
+		ImprimirEsp(Inicio + 1, Final);
+	} else {
+		return;
+	}
+};
 
-function Imprimir(Fila, Contador, FinalE, FinalA) {
-  if (Fila <= 25) {
-    ImprimirEsp(Contador, FinalE);
-    ImprimirA(Contador, FinalA);
-    print("\n");
-    Imprimir(Fila + 1, Contador, FinalE - 1, FinalA + 1);
-  } else {
-    return;
-  }
-}
+const Imprimir = (Fila, Contador, FinalE, FinalA) => {
+	if (Fila <= 25) {
+		ImprimirEsp(Contador, FinalE);
+		ImprimirA(Contador, FinalA);
+		print('\n');
+		Imprimir(Fila + 1, Contador, FinalE - 1, FinalA + 1);
+	} else {
+		return;
+	}
+};
 
 Imprimir(1, 1, 79, 1);
-
-
-
-

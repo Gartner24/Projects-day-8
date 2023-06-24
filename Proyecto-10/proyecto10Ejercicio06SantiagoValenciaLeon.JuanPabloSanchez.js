@@ -20,25 +20,25 @@ Programa de Ingeniería de Sistemas y Computación
 Descripción: Este programa pide el número de termino deseados en la serie de Padovan.
 */
 
-const prompt = require("prompt-sync")({sigint: true});
+const prompt = require('prompt-sync')({ sigint: true });
 
 // Variable que almacena el numero de terminos deseados
-let num = prompt("Ingrese el numero de terminos deseados: ");
+let num = prompt('Ingrese el numero de terminos deseados: ');
 
 // Funcion que calcula la serie de padovan
 const padovan = (num) => {
-    if (num == 0) return 1;
-    if (num == 1) return 0;
-    if (num == 2) return 0;
-    return padovan(num - 2) + padovan(num - 3);
-}
+	if (num == 0) return 1;
+	if (num == 1) return 0;
+	if (num == 2) return 0;
+	return padovan(num - 2) + padovan(num - 3);
+};
 
 // Funcion que imprime la serie de padovan
 const imprimirPadovan = (num) => {
-    if (padovan(num) <= 10000 && num > 0) {
-        console.log(padovan(num));
-        imprimirPadovan(num - 1);
-    }
-}
+	if (padovan(num) <= 10000 && num > 0) {
+		console.log(padovan(num));
+		imprimirPadovan(num - 1);
+	}
+};
 
 imprimirPadovan(num);

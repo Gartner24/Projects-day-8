@@ -16,16 +16,16 @@ Programa de Ingeniería de Sistemas y Computación
 -----------------------------------------------------------------
 Descripción: Este programa lee un número entero positivo, de tres cifras (N <= 999 Y N>=100) y determina si el número es capicúo (es igual al revés del número original).
 */
-const prompt = require("prompt-sync")({sigint: true});
+const prompt = require('prompt-sync')({ sigint: true });
 
 // Variable que almacena el numero ingresado por el usuario
-let numero = prompt("Ingrese un número de tres cifras: ");
+let numero = prompt('Ingrese un número de tres cifras: ');
 
 // Funcion que determina si el numero es capicua o no
-function esCapicua(numero) {
-    let numeroInvertido = numero.split("").reverse().join("");
-    if (numero == numeroInvertido) console.log("El numero es capicua");
-    else console.log("El numero no es capicua");
-}
+const esCapicua = (numero) => {
+	let numeroInvertido = numero.split('').reverse().join('');
+	if (numero == numeroInvertido) console.log('El numero es capicua');
+	else console.log('El numero no es capicua');
+};
 
 esCapicua(numero);

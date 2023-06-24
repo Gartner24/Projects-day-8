@@ -15,19 +15,23 @@ Programa de Ingeniería de Sistemas y Computación
 Descripción: Este programa indica si de tres numero ingresados, el tercero es igual a la multiplicacion de los dos primeros
 */
 
-//const prompt=require("prompt-sync")({sigint:true});
-function productoDosPrimeros(){
-    /*let numero1 = prompt("Ingrese el primer numero: ");
-    let numero2 = prompt("Ingrese el segundo numero: );
-    let numero3 = prompt("Ingrese el tercer numero: )*/
-    let numero1 = 3;//Ingresado por consola
-    let numero2 = 5;//Ingresado por consola
-    let numero3 = 12;//Ingresado por consola
-    if(numero1 * numero2 == numero3){
-        console.log("La multiplicacion de los dos primeros es IGUAL al tercero así: " + numero1 + " * " + numero2 + " = " + numero3);
-    }else{
-        console.log("La multiplicacion de los dos primeros es DIFERENTE al tercero así: " + numero1 + " * " + numero2 + " != " + numero3);
-    }
-}
+const prompt = require('prompt-sync')({ sigint: true });
+
+// Función que indica si de tres numero ingresados, el tercero es igual a la multiplicacion de los dos primeros
+const productoDosPrimeros = () => {
+	let numero1 = prompt('Ingrese el primer numero: ');
+	let numero2 = prompt('Ingrese el segundo numero: ');
+	let numero3 = prompt('Ingrese el tercer numero: ');
+
+	if (numero1 * numero2 == numero3) {
+		console.log(
+			`La multiplicacion de los dos primeros es IGUAL al tercero así: ${numero1} * ${numero2} = ${numero3}`
+		);
+	} else {
+		console.log(
+			`La multiplicacion de los dos primeros es DIFERENTE al tercero así: ${numero1} * ${numero2} != ${numero3}`
+		);
+	}
+};
 
 productoDosPrimeros();

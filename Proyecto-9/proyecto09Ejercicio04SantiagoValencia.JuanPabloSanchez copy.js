@@ -15,22 +15,26 @@ Programa de Ingeniería de Sistemas y Computación
 Descripción: Este programa imprime un mes dependiendo del numero del 1 al 12 ingresado
 */
 
-//const prompt=require("prompt-sync")({sigint:true});
-function encontrarMes(){
-    //let numero = prompt("Ingrese un numero: ");
-    let numero = 12;//Ingresado por consola
+const prompt=require("prompt-sync")({sigint:true});
+
+// Funcion que imprime el mes dependiendo del numero ingresado
+const encontrarMes = () => {
+    let numero = prompt("Ingrese un numero: ");
+
+    // Condicional que imprime el mes dependiendo del numero ingresado
     if(numero == 1) console.log("Enero.");
-    if(numero == 2) console.log("Febrero");
-    if(numero == 3) console.log("Marzo");
-    if(numero == 4) console.log("Abril");
-    if(numero == 5) console.log("Mayo");
-    if(numero == 6) console.log("Junio");
-    if(numero == 7) console.log("Julio");
-    if(numero == 8) console.log("Agosto");
-    if(numero == 9) console.log("Septiembre");
-    if(numero == 10) console.log("Octubre");
-    if(numero == 11) console.log("Noviembre");
-    if(numero == 12) console.log("Diciembre");
+    else if(numero == 2) console.log("Febrero");
+    else if(numero == 3) console.log("Marzo");
+    else if(numero == 4) console.log("Abril");
+    else if(numero == 5) console.log("Mayo");
+    else if(numero == 6) console.log("Junio");
+    else if(numero == 7) console.log("Julio");
+    else if(numero == 8) console.log("Agosto");
+    else if(numero == 9) console.log("Septiembre");
+    else if(numero == 10) console.log("Octubre");
+    else if(numero == 11) console.log("Noviembre");
+    else if(numero == 12) console.log("Diciembre");
+    else console.log("El numero ingresado no es valido");
 }
 
 encontrarMes();

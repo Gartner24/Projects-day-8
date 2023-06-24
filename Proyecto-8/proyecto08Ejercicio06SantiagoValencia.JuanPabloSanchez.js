@@ -4,7 +4,7 @@ el total de horas y minutos.
 -----------------------------------------------------------------
 Fecha de publicación: 20-06-2023
 Hora: 10:22 a.m
-Versión: 1.0
+Versión: 2.0
 Autores: Ing(c) Santiago Valencia, Ing(c) Juan Pablo Sánchez
 Lenguaje: JavaScript
 Versión del lenguaje: 6.0
@@ -16,13 +16,17 @@ Programa de Ingeniería de Sistemas y Computación
 Descripción: Este programa recibe el numero de minutos e imprime el total de horas y minutos
 */
 
-//const prompt=require("prompt-sync")({sigint:true});
-function convertirMinutosAHorasMinutos(){
-    //let cantidadMinutos = prompt("Por favor digite la cantidad de minutos: ");
-    let cantidadMinutos = 200;//Variable que recibe la cantidad de minutos a convertir
-    let cantidadHoras = Math.floor(cantidadMinutos / 60);//Toma la parte entera como las horas
-    let cantidadFinalMinutos = cantidadMinutos % 60;//Toma el resto de la división como la cantidad final de minutos
-    console.log(cantidadMinutos + " minutos equivalen a " + cantidadHoras + " horas y " + cantidadFinalMinutos + " minutos.");
-}
+const prompt = require('prompt-sync')({ sigint: true });
+
+// Función que convierte minutos a horas y minutos
+const convertirMinutosAHorasMinutos = () => {
+	let cantidadMinutos = prompt('Por favor digite la cantidad de minutos: '); //Variable que recibe la cantidad de minutos a convertir
+
+	let cantidadHoras = Math.floor(cantidadMinutos / 60); //Toma la parte entera como las horas
+	let cantidadFinalMinutos = cantidadMinutos % 60; //Toma el resto de la división como la cantidad final de minutos
+	console.log(
+		`${cantidadMinutos} minutos equivalen a ${cantidadHoras} horas y ${cantidadFinalMinutos} minutos.`
+	);
+};
 
 convertirMinutosAHorasMinutos();

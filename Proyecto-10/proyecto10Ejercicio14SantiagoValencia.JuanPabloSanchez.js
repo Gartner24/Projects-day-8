@@ -29,21 +29,20 @@ Programa de Ingeniería de Sistemas y Computacion
 ------------------------------------------------------
 Descripción: Este programa imprime las tablas de multiplicar del 1 al 10*/
 
-function Tabla(inicial, final) {
-    if (inicial <= final) {
-      Multiplicar(1, 10, inicial);
-      Tabla(inicial + 1, final);
-    }
-  }
-  
-  function Multiplicar(inicial, final, numero) {
-    if (inicial <= final) {
-      console.log(numero + " x " + inicial + " = " + (numero * inicial));
-      Multiplicar(inicial + 1, final, numero);
-    } else {
-      console.log("\n");
-    }
-  }
-  
-  Tabla(1, 10);
+const Tabla = (inicial, final) => {
+	if (inicial <= final) {
+		Multiplicar(1, 10, inicial);
+		Tabla(inicial + 1, final);
+	}
+};
 
+const Multiplicar = (inicial, final, numero) => {
+	if (inicial <= final) {
+		console.log(numero + ' x ' + inicial + ' = ' + numero * inicial);
+		Multiplicar(inicial + 1, final, numero);
+	} else {
+		console.log('\n');
+	}
+};
+
+Tabla(1, 10);
